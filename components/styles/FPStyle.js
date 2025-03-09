@@ -10,24 +10,30 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
 
-  logo: {
-    height: 200,
-    marginBottom: 20,
-  },
-
   title: {
-    top: -60,
-    fontSize: 32,
-    fontWeight: 'bold',
+    top: 0,
+    fontSize: 24,
     marginBottom: 20,
     color: '#01e5fd',
   },
 
+  logo: {
+    top: 50,
+    height: 200,
+  },
+
+  text: {
+    color: '#fff',
+    fontSize: 13,
+    width: '83%',
+    textAlign: 'center',
+  },
+
   inputContainer: {
-    top: -25,
+    top: 25,
     flexDirection: 'row',
     alignItems: 'center',
-    width: '90%',
+    width: '85%',
     height: 55,
     borderColor: '#ccc',
     borderRadius: 15,
@@ -43,8 +49,8 @@ export default StyleSheet.create({
   },
 
   buttonLogin: {
-    width: 250,
-    top: -30,
+    width: 200,
+    top: 0,
     height: 50,
     backgroundColor: '#7950b6',
     justifyContent: 'center',
