@@ -11,13 +11,32 @@ export const HomeStyle = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 100, // Espacio para el logo
   },
+
+  toppingContainer: {
+    position: 'absolute', // Posiciona el contenedor de manera absoluta
+    top: 20, // Distancia desde la parte superior
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '90%',
+    alignItems: 'center', // Centra los elementos verticalmente
+  },
+
   logo: {
-    position: 'absolute',
-    top: 20,
-    left: 20,
     width: 150,
     height: 150,
   },
+
+  bellBarsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between', // Separa los íconos al máximo
+    margin: 20,
+  },
+
+  btnBellBars: {
+    padding: 10,
+    borderRadius: 10,
+  },
+
   routeContainer: {
     marginTop: 40,
     width: '90%',

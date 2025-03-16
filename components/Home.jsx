@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Alert,
   Image,
   ImageBackground,
   Text,
@@ -8,6 +9,8 @@ import {
 } from 'react-native';
 import {HomeStyle} from './styles/HomeStyle';
 import {
+  faBars,
+  faBell,
   faBusSimple,
   faHeadset,
   faLocationDot,
@@ -16,15 +19,31 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 const Home = () => {
+
+  const NottsButton = () => {
+    Alert.alert('Notificaciones', 'No tienes notificaciones');
+  }
+
   return (
     <View style={HomeStyle.container}>
       <View style={HomeStyle.contentContainer}>
         {/* Logo */}
-        <Image
-          style={HomeStyle.logo}
-          source={require('./images/AYVOY_logo.png')}
-          resizeMode="contain"
-        />
+
+        <View style={HomeStyle.toppingContainer}>
+          <Image
+            source={require('./images/AYVOY_logo.png')}
+            style={HomeStyle.logo}
+          />
+          <View style={HomeStyle.bellBarsContainer}>
+            <TouchableOpacity style={HomeStyle.btnBellBars} onPress={NottsButton} >
+              <FontAwesomeIcon icon={faBell} size={30} color="#fff" />
+            </TouchableOpacity>
+
+            <TouchableOpacity style={HomeStyle.btnBellBars}>
+              <FontAwesomeIcon icon={faBars} size={30} color="#fff" />
+            </TouchableOpacity>
+          </View>
+        </View>
 
         {/* Botones de ruta */}
         <TouchableOpacity style={HomeStyle.routeContainer}>
@@ -44,7 +63,7 @@ const Home = () => {
         <View style={HomeStyle.miniContainer}>
           <TouchableOpacity style={HomeStyle.pointsContainer}>
             <Text style={HomeStyle.miniTitle}>Puntos:</Text>
-            <Text style={HomeStyle.points} >45</Text>
+            <Text style={HomeStyle.points}>45</Text>
           </TouchableOpacity>
 
           <TouchableOpacity style={HomeStyle.chatContainer}>
