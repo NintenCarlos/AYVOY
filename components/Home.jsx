@@ -17,12 +17,14 @@ import {
   faMessage,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import { DrawerActions, useNavigation } from '@react-navigation/native';
+
 
 const Home = () => {
-
+  const navigation = useNavigation();
   const NottsButton = () => {
     Alert.alert('Notificaciones', 'No tienes notificaciones');
-  }
+  };
 
   return (
     <View style={HomeStyle.container}>
@@ -35,11 +37,12 @@ const Home = () => {
             style={HomeStyle.logo}
           />
           <View style={HomeStyle.bellBarsContainer}>
-            <TouchableOpacity style={HomeStyle.btnBellBars} onPress={NottsButton} >
+            <TouchableOpacity style={HomeStyle.btnBellBars} onPress={NottsButton}>
               <FontAwesomeIcon icon={faBell} size={30} color="#fff" />
             </TouchableOpacity>
 
-            <TouchableOpacity style={HomeStyle.btnBellBars}>
+            <TouchableOpacity style={HomeStyle.btnBellBars} onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+ >
               <FontAwesomeIcon icon={faBars} size={30} color="#fff" />
             </TouchableOpacity>
           </View>

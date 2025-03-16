@@ -8,12 +8,16 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import LoginStyle from './styles/LoginStyle';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faCircleUser, faLock} from '@fortawesome/free-solid-svg-icons';
 
 const Login = ({navigation}) => {
+  const goToHome = () => {
+    navigation.navigate('Main');
+  };
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -55,9 +59,7 @@ const Login = ({navigation}) => {
         </View>
 
         <View>
-          <TouchableOpacity
-            style={LoginStyle.buttonLogin}
-            onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity style={LoginStyle.buttonLogin} onPress={goToHome}>
             <Text style={LoginStyle.buttonText}>Iniciar Sesión</Text>
           </TouchableOpacity>
         </View>
