@@ -8,8 +8,6 @@ import { DrawerNavigator } from './components/Drawer';
 // Crea el Stack Navigator
 const Stack = createNativeStackNavigator();
 
-// Crea el Drawer Navigator
-
 // Componente principal
 const App = () => {
   return (
@@ -29,7 +27,7 @@ const App = () => {
 
         {/* Pantalla con Drawer */}
         <Stack.Screen
-          name="Main"
+          name="Home"
           component={DrawerNavigator}
           options={{headerShown: false}}
         />

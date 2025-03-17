@@ -8,14 +8,15 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import LoginStyle from './styles/LoginStyle';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faCircleUser, faLock} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faCircleUser, faLock } from '@fortawesome/free-solid-svg-icons';
 
-const Login = ({navigation}) => {
+const Login = ({ navigation }) => {
   const goToHome = () => {
-    navigation.navigate('Main');
+    // Redirige al usuario a la pantalla Main
+    navigation.navigate('Home');
   };
 
   return (
