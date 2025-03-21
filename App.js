@@ -3,7 +3,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './components/Login';
 import RecoverPassword from './components/RecoverPassword';
-import { DrawerNavigator } from './components/Drawer';
+import {DrawerNavigator} from './components/Drawer';
+import { TabNavigator } from './components/Tabs';
 
 // Crea el Stack Navigator
 const Stack = createNativeStackNavigator();
@@ -31,6 +32,8 @@ const App = () => {
           component={DrawerNavigator}
           options={{headerShown: false}}
         />
+
+        <Stack.Screen name="PointsManager" component={TabNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

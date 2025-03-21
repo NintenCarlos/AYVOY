@@ -1,0 +1,15 @@
+// Colores AYVOY
+Color Fondo: 252569
+
+Color Contenedores: 
+    ca2193 // Rosa
+    784fba // Morado 
+    e55a14 // Naranja
+    fff325 // Amarillo
+    0dc8e2 // Caleste
+
+Color Titulos: 
+    01e5fd // Aqua
+    7950b6 // Morado (Chance y lo cambio por el color del contenedor)
+    009BB0 // Aqua Oscuro (Para Subtitulos)
+    cbd3d4 // Gris (Para los puntos)
