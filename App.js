@@ -5,6 +5,7 @@ import Login from './components/Login';
 import RecoverPassword from './components/RecoverPassword';
 import {DrawerNavigator} from './components/Drawer';
 import { TabNavigator } from './components/Tabs';
+import ChatProfile from './components/ChatProfile';
 
 // Crea el Stack Navigator
 const Stack = createNativeStackNavigator();
@@ -30,6 +31,11 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={DrawerNavigator}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="ChatProfil"
+          component={ChatProfile}
           options={{headerShown: false}}
         />
 
